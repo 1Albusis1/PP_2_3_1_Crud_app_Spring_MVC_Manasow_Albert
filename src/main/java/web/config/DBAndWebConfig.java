@@ -72,9 +72,7 @@ public class DBAndWebConfig implements WebMvcConfigurer {
         jpaProperties.put("hibernate.dialect", env.getRequiredProperty("hibernate.dialect"));
         jpaProperties.put("hibernate.hbm2ddl.auto", env.getRequiredProperty("hibernate.hbm2ddl.auto"));
         jpaProperties.put("hibernate.show_sql", env.getRequiredProperty("hibernate.show_sql"));
-        jpaProperties.put("hibernate.temp.use_jdbc_metadata_defaults", env.getRequiredProperty("hibernate.temp.use_jdbc_metadata_defaults"));
-        jpaProperties.put("hibernate.format_sql", env.getRequiredProperty("hibernate.format_sql"));
-        jpaProperties.put("hibernate.use_sql_comments", env.getRequiredProperty("hibernate.use_sql_comments"));
+
 
         entityManagerFactoryBean.setJpaProperties(jpaProperties);
         return entityManagerFactoryBean;
